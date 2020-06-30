@@ -1,0 +1,59 @@
+<div id="loader-wrapper" *ngIf="carregando">
+    <h4>
+        <img src="../../../../assets/img/logo.png" /><br><br>
+        {{ mensagemCarregando }}
+    </h4>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <b>{{ titulo }}</b>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form [formGroup]="form" novalidate>
+                            <div class="form-group">
+                                <label for="linha">Selecione a linha:</label>
+                                <ng-select 
+                                    appearance="outline" 
+                                    [searchable]="true" 
+                                    [clearable]="true" 
+                                    labelForId="linha" 
+                                    formControlName="linha">
+                                        <ng-option value="{{ objeto.id }}" *ngFor="let objeto of linhas">
+                                            {{ objeto.codigo }} - {{ objeto.nome }}
+                                        </ng-option>
+                                </ng-select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-12">
+                        <button *ngIf="linhaSelecionada()" type="button" class="btn btn-primary mr-1" (click)="pesquisarItinerario()" >Pesquisar Itinerário</button>
+                        <a class="btn btn-primary" [routerLink]="['/inicio']">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8" *ngIf="ponto">
+        <div class="card">
+            <div class="card-header">
+                <b>{{ ponto.codigo }} - {{ ponto.nome }}</b>
+            </div>
+            <div class="card-body">
+                <ngx-datatable 
+                    class="bootstrap"
+                    [rows]="ponto.pontos" 
+                    [columns]="colunas"
+                    [columnMode]="ColumnMode.force" 
+                    [headerHeight]="50"
+                    [footerHeight]="50" 
+                    rowHeight="auto" 
+                    [limit]="10">
+                </ngx-datatable>
+            </div>
+        </div>
+    </div>
+</div>
