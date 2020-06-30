@@ -15,3 +15,9 @@
     opacity: 1;
     color: #FFF;
 }
+
+@media (max-width: 768px) {
+  .espaco-filtro-tabela {
+    margin-bottom: 15px !important;
+  }
+}

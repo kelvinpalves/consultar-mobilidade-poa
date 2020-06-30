@@ -7,10 +7,6 @@ import {
 
 export const ConsultarRoutes: Routes = [
     {
-        path: 'consultar',
-        component: ConsultarComponent
-    },
-    {
         path: 'consultar/:tipoConsulta',
         component: ConsultarComponent
     },

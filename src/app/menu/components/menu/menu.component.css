@@ -136,5 +136,10 @@ img {
 
 .item-menu {
   cursor: pointer;
-  /* margin-bottom: 60px; */
+}
+
+@media (max-width: 768px) {
+  .item-menu {
+    margin-bottom: 70px !important;
+  }
 }

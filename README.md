@@ -1,12 +1,20 @@
-# Dimed
+# Consulta de Mobilidade Urbana - Porto Alegre / RS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/kelvinpalves/consultar-mobilidade-poa?branch=master)](https://bettercodehub.com/)
 
+# Dependências
+
+## Angular CLI
+npm install -g @angular/cli@9.0.7
+
+## Dependências do Projeto
+npm install
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --aot` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
